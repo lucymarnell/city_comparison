@@ -4,4 +4,4 @@ This project consists of a web visualization tool to find cities that are well-s
 
 You can view the city comparison site [here](https://ds4200-s22.github.io/final-project-city-comparison/).
 
-This project was created for DS4200.
+This project was created for a Data Visualization course at Northeastern University.
