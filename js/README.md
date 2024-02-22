@@ -1,1 +1,1 @@
-# Put the JavaScript code you write in this folder
+This folder includes the JavaScript code to create the visualizations.
