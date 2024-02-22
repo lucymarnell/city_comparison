@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<!-- Metadata -->
+<head>
+  <meta charset='utf-8'>
+
+  <!-- Title -->
+  <title>Which city should you live in?</title>
+  
+  <!-- CSS Styling -->
+  <link rel='stylesheet' href='style.css'>
+
+</head>
+
+<!-- Main page content -->
+<body>
+
+<!-- Update this with your GitHub repo URL -->
+<p id='repo-link'><span><a href='https://github.com/DS4200-S22/final-project-city-comparison'>Link to GitHub Repo</a></span></p>
+
+<!-- Writeup -->
+<div class='content-column'>
+    <h1>Which city should you live in?</h1>
+        
+    <p>
+      <strong>Rida Sharief</strong>, <strong>Lucy Marnell</strong>, <strong>Neha Simon</strong>, <strong>Gaea Leemon</strong>
+        
+    <p>Course Project as part of
+    	<a href='https://northeastern.instructure.com/courses/18721'>DS4200 S22: Information Visualization</a>, taught by 
+      <a href='https://www.khoury.northeastern.edu/home/amosca/'>Prof. Ab Mosca</a>, 
+      <a href='https://visualization.khoury.northeastern.edu/'>Data Visualization @ Khoury</a>, 
+      <a href='https://www.khoury.northeastern.edu/'>Northeastern University</a>.
+    </p>
+        
+        
+    <h1>Abstract</h1>
+        
+    <p>
+      With many people graduating, something they may be thinking about is where they would like to move post-graduation. With so many options of where to live, the rising popularity of remote work and the vast number of resources around city quality of life, making this choice can be overwhelming for many. Therefore our area of interest is to identify cities around the world and what it is like to live there. Our project aims to make these choices easier through location-related visualizations. 
+
+    </p>
+</div>
+
+ 
+<!-- Visualization -->   
+<h1>Visualization</h1>
+  
+<div class='vis-holder' id="vis-container">
+
+</div>
+  
+  
+<!-- More writeup -->
+<div class = 'content-column'>
+
+  <h1>Demo Video</h1>
+  <iframe width="950" height="594" src="https://www.youtube.com/embed/QFLM7utRgDE" title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <h1>Visualization Explanation</h1>
+  
+  <p>
+    There are three linked visualizations that make up our visualization tool:
+  </p>
+  <ul>
+    <li> A heat map that displays the average overall score for each continent.
+    </li>
+    <li> A bar chart that displays the Macroeconomic, Recreational, Residential, and Environmental Quality category scores for the chosen continent. (* Please look below to see a breakdown of what was considered in each category's measure)
+    </li>
+    <li> A scatterplot that displays the average overall score for a city against the chosen category.
+    </li>
+  </ul>
+  <p>
+   The three visuals are linked in the following way:
+  </p>
+  <ul>
+    <li> When one clicks on the continent of choice, the bar chart updates with the category scores for the continent.
+    </li>
+    <li> When one click on a bar in the bar graph, the scatterplot updates with the the city level data for the category.
+    </li>
+  </ul>
+   <p>
+    For readability, we have added the following features:
+  </p>
+   <ul>
+    <li> A legend on the heat map so that one can better understand the continents' corresponding coloring, please note that a darket color corresponds to a higher score.
+    </li>
+    <li> Color coded bar graph, meaning that when one clicks on a bar in the bar graph, the points in the scatterplot display the same color as the chosen bar.
+    </li>
+    <li> A tool tip so that when one hovers over a given point in the scatterplot, the city's name, average overall score, and category score show up.
+    </li>
+  </ul>
+  <p>
+    * There are four categories shown in the visualizations above. Each categories is an average of many related attributes. Below you will see what each category is compromised of.
+  </p>
+  <p>
+    Macroeconomic Overall:
+  </p>
+  <ul>
+    <li> Venture Capital
+    </li>
+    <li> Business Freedom
+    </li>
+    <li> Economy
+    </li>
+    <li> Taxation
+    </li>
+  </ul>
+  <p>
+   Recreational Overall:
+  </p>
+  <ul>
+    <li> Internet Access
+    </li>
+    <li> Leisure & Culture
+    </li>
+    <li> Outdoors
+    </li>
+    <li> Tolerance
+    </li>
+  </ul>
+   <p>
+   Residential Overall:
+  </p>
+  <ul>
+    <li> Housing
+    </li>
+    <li> Cost of Living
+    </li>
+    <li> Safety
+    </li>
+    <li> Environmental Quality
+    </li>
+  </ul>
+   <p> Overall Rating is an average of all the above attributes.
+  </p>
+<li><a href='https://docs.google.com/presentation/d/1EMe4YtJm4RhBlweHWG7sKihxQrgnElIc4DJhopyti6w/edit?usp=sharing'>
+      Link to presentation</a>
+    </li>
+  
+  <h1>Acknowledgments</h1>
+
+  <ul>
+    <li><a href='https://d3-graph-gallery.com/graph/choropleth_basic.html'>
+      Most basic choropleth map in d3.js</a>
+      by d3-graph-gallery on how to create a heatmap.
+    </li>
+    <li><a href='https://d3-legend.susielu.com/#color-linear'>
+      d3 SVG Legend</a>
+      by Susie Lu on how to add a legend to a map.
+    </li>
+    <li><a href='https://gist.github.com/cmunns/76fb72646a68202e6bde#file-continents-json'>
+      Json file for heat map</a>
+      by Adam Munns used for map.
+    </li>
+    <li><a href='https://d3-graph-gallery.com/graph/scatter_tooltip.html'>
+      Scatterplot with tooltip</a>
+      by d3-graph-gallery used for hovering on scatterplot. 
+    </li>
+    <li><a href='https://plnkr.co/edit/evfrVWyG0oJPAv60CMa5?p=preview&preview'>
+    d3.js Map With Labels</a>
+    by larsenmtl used for adding labels to a map
+  </ul>
+</div>
+  
+  <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
+  <script src='lib/d3.v6.1.1/d3.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+  <script src='js/visualization.js'></script>
+</body>
+</html>
